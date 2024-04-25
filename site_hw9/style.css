@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: black;
+}
+
+body {
+scroll-behavior: smooth;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0px auto;
+}
+
+.header {
+  background-color: #222222;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.button_nav {
+  margin: 30px 0%;
+}
+
+.leftSideNav {
+  display: flex;
+  gap: 30px;
+}
+
+.rightSideNav {
+  display: flex;
+  gap: 30px;
+}
+
+.section1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 65px;
+  background-color: #F1E4E6;
+}
+
+.promo__img {
+  width: 50%;
+}
+
+.section1Text {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-self: center;
+}
+
+.section1Text h2 {
+  font-family: 'Lato';
+  font-size: 48px;
+  font-weight: 900;
+}
+
+.section1Text h3 {
+  font-family: 'Lato';
+  font-size: 32px;
+  font-weight: 700;
+}
+
+
+
+.section1Text__border {
+  border-left: 12px solid #F16D7F;
+  padding-left: 30px;
+}
+
+.offer__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.offer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 96px;
+}
+
+.offer__card {
+  
+ 
+}
+
+.offer__card-forWomen {
+  background-image: url('./img/forwomen.png');
+  height: 260px;
+  width: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.offer__card-forman {
+  background-image: url('./img/formen.png');
+  height: 260px;
+  width: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.offer__card-forkids {
+  background-image: url('./img/forkids.png');
+  height: 260px;
+  width: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.offer__card-accesories {
+  background-image: url('./img/accesories.png');
+  height: 180px;
+  width: 1140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.offer__text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.offer__text h3 {
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: 'Lato';
+}
+
+.offer__text h2 {
+  color: #F16D7F;
+  font-weight: 700;
+  font-size: 24px;
+  font-family: 'Lato';
+}
+
+.products_sect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+  /* padding-left: calc(50%-400);
+  padding-right: calc(50%-400); */
+  /* background-color: #222222; */
+}
+
+
+.products_sect_head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.products_sect_head h2 {
+  font-family: 'Lato';
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+
+.products_sect_head p {
+  font-family: 'Lato';
+  font-size: 14px;
+  font-weight: 400;
+  color: #9F9F9F;
+  margin-bottom: 48px;
+}
+
+.products {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  row-gap: 25px;
+  margin-bottom: 30px;
+}
+
+.products__card {
+  max-width: 360px;
+  background-color: #F8F8F8;
+}
+
+
+/* Затемнение при наведениии===================== */
+
+.card__top {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: background 0.5s ease;
+}
+.card__top:hover .overlay {
+  background: #3A3838DB;
+  opacity: 86%;
+}
+
+.add_card-btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+  padding: 13px 16px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+.btn_add {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.btn_add a {
+  text-align: center;
+  font-family: 'Lato';
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  /* z-index: 1;  */
+}
+
+.card__top:hover .add_card-btn {
+  opacity: 1;
+}
+
+/* =========================== */
+
+.text__blok {
+  display: block;
+  text-align: justify;
+  justify-content: start;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.text__blok p {
+  font-family: 'Lato';
+  display: flex;
+  flex-direction: column;
+  /* line-height: 18px; */
+  margin: 16px 24px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #5D5D5D;
+}
+
+.text__blok h2 {
+  font-family: 'Lato';
+  display: flex;
+  flex-direction: column;
+  /* line-height: 18px; */
+  margin-top: 16px;
+  margin: 16px 24px;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.text__blok h3 {
+  font-family: 'Lato';
+  display: flex;
+  flex-direction: column;
+  /* line-height: 18px; */
+  margin: 16px 24px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #F16D7F;
+}
+
+
+
+.btn__browseAll {
+  font-family: 'Lato';
+  display: block;
+  width: 212px;
+  height: 48px;
+  border: 1px solid #FF6A6A;
+  text-align: center;
+  line-height:  40px;
+  color: #F26376;
+}
+
+
+/* планшет */
+@media (max-width: 1146px) and (min-width: 768px) {
+  .container {
+    max-width: 736px;
+  }
+  .navigation {
+    justify-content: space-between;
+    /* padding: 30px 0px; */
+  }
+  .button_nav {
+    margin: 15px 0%;
+  }
+  .leftSideNav {
+    gap: 41px;
+  }
+  
+  .rightSideNav {
+    gap: 41px;
+  }
+  .products {
+    justify-content: space-around;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    row-gap: 16px;
+    margin-bottom: 30px;
+  }
+  .section1Text h2 {
+    font-size: 44px;
+  }
+  
+  .section1Text h3 {
+    font-size: 24px;
+  }
+
+}
+
+
+/* телефон */
+@media (max-width: 767px) {
+  .container {
+    max-width: 343px;
+  }
+  .navigation {
+    justify-content: space-around;
+    /* padding-left: 30px; */
+  }
+  .button_nav {
+    margin: 18px 0px;
+    
+  }
+  .offer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 30px;
+  }
+  .products {
+    justify-content: space-around;
+    align-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+    row-gap: 16px;
+    margin-bottom: 30px;
+  }
+}
+
+
+/* =======footer========== */
+
+.feature {
+  background: #222224;
+  max-width: 100%;
+  height: 100px;
+}
+
+.subscribe {
+  max-width: 100%;
+  background: url('./img/photo_subscribe.png');
+  height: 448px;
+}
+
+.subscribe {
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  /* flex-direction: row; */
+}
+
+.subscribe_content {
+  display: flex;
+  /* flex-direction: row; */
+  padding-top: 97px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.subscribe_content-left {
+  display: flex;
+  max-width: 360px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subscribe_content-left p {
+  text-align: center;
+}
+
+.subscribe_content-left img {
+  padding-bottom: 30px;
+}
+
+
+.subscribe_content-right {
+  display: flex;
+  /* max-width: 360px; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribe_content-right h5 {
+  padding-bottom: 32px;
+}
+
+
+.subscribe_input {
+  display: flex;
+  flex-direction: row;
+}
+
+.subscribe_input-eml {
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  /* border: #222222 solid 1px ; */
+  border-radius: 20px 0 0 20px;
+  max-width: 200px;
+  max-height: 49px;
+  background: #E1E1E1;
+}
+
+.subscribe_input-eml input {
+  border: none;
+  background: none;
+}
+
+.subscribe_button button {
+  padding: 10px;
+  background: #E05C6E;
+  border-radius: 0 20px 20px 0;
+  max-width: 100px;
+  max-height: 49px;
+  cursor: pointer;
+  border: none;
+
+}
+.subscribe_button p {
+  text-align: center;
+  font-family: 'Lato';
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+}
+
+
+
+
+.copyright {
+  background: #222224;
+}
+
+.copyright__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright__content p {
+  font-family: 'Lato';
+  font-size: 16px;
+  font-weight: 400;
+  color: #FBFBFB;
+  padding: 16px 0;
+}
+
+.logo_cprght {
+  display: flex;
+  margin: 24px 0;
+  gap: 8px;
+}
